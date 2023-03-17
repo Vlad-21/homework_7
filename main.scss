@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+  width: 800px;
+  height: 800px;
+  box-shadow: 0 4px 15px 0px #808080;
+  border-radius: 20px;
+  display: flex;
+  &__film-list {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid grey;
+    &__container {
+      width: 100%;
+      height: 700px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      &__item {
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        &--title {
+          height: 50px;
+          width: 200px;
+          box-shadow: 0 4px 15px 0px #808080;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          text-decoration: none;
+          white-space: nowrap;
+          font-size: 14px;
+          color: darkslategrey;
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+        &--edit {
+          width: 50px;
+          height: 50px;
+          box-shadow: 0 4px 15px 0px #808080;
+          border-radius: 50%;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          color: darkslategrey;
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &__button-container {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 2px solid grey;
+      &--link {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 15px 0px #808080;
+        border-radius: 20px;
+        color: darkslategrey;
+        font-size: 18px;
+        justify-content: center;
+        text-decoration: none;
+        margin: 0;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__film-preview {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 1px solid grey;
+    &--img {
+      width: 300px;
+    }
+    &--title {
+      margin: 15px 0 0;
+      font-size: 24px;
+    }
+    &--category {
+      margin: 15px 0 0;
+      font-size: 14px;
+    }
+    &--plot {
+      margin: 15px 0 0;
+      font-size: 18px;
+      width: 400px;
+    }
+  }
+  &__film-edit {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 1px solid grey;
+    &--title {
+      font-size: 24px;
+    };
+    &--describe {
+      font-size: 18px;
+      margin: 30px 0 10px;
+    };
+    &--input {
+      width: 250px;
+      height: 30px;
+      border-radius: 12px;
+    }
+    &--input-plot {
+      width: 90%;
+      height: 120px;
+      border-radius: 12px;
+    }
+    &__button-container {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+      margin-top: 40px;
+      &--cancel {
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        border: 1px solid darkslategrey;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+      &--save {
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        border: none;
+        background: darkgreen;
+        color: #ffffff;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.add-button {
+  width: 40px;
+  height: 40px;
+  background: red;
+}
+
+.add-new {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  padding-left: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-left: 1px solid grey;
+  &--title {
+    font-size: 24px;
+  };
+  &--describe {
+    font-size: 18px;
+    margin: 30px 0 10px;
+  };
+  &--input {
+    width: 250px;
+    height: 30px;
+    border-radius: 12px;
+  }
+  &--input-plot {
+    width: 90%;
+    height: 120px;
+    border-radius: 12px;
+  }
+  &__button-container {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    margin-top: 40px;
+    &--cancel {
+      width: 100px;
+      height: 50px;
+      border-radius: 20px;
+      border: 1px solid darkslategrey;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    &--save {
+      width: 100px;
+      height: 50px;
+      border-radius: 20px;
+      border: none;
+      background: darkgreen;
+      color: #ffffff;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+}

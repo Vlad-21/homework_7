@@ -1,4 +1,4 @@
-const initialFilms = [
+let initialFilms = [
     {
         id: '1',
         title: 'Поводир',
@@ -15,9 +15,17 @@ const initialFilms = [
     },
     {
         id: '3',
-        title: 'ОБорщ. Секретний інгредієнт',
+        title: 'Борщ. Секретний інгредієнт',
         category: 'Документальний, Тревел, Кулінарний',
         imageUrl: 'https://usfa.gov.ua/upload/media/2021/02/03/6019d3c979927-5fbd34a7dcbce200118649f5.jpg',
         plot: 'Який український борщ справжній? На свинині, птиці, яловичині, чи може, таки на грибах? А як щодо квашеної капусти, а не свіжої, і соленого томатного розсолу замість пасти? Буряк варити, запікати чи квасити? Куштували рибний борщ?'
     }
 ]
+
+function setFilms() {
+    if (!JSON.parse(localStorage.getItem('films'))) {
+        localStorage.setItem('films', JSON.stringify(initialFilms));
+    };
+};
+
+setFilms();
